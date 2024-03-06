@@ -1,0 +1,288 @@
+.tabs {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.tab {
+  width: 200px;
+  padding: 15px;
+  background-color: rgb(24, 26, 30);
+  border: 1px rgba(255,255,255,.15) solid;
+  box-shadow: 0px 3px 10px rgba(255,255,255,.1);
+  border-bottom: 5px rgba(255,255,255,.1) solid;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  float: left;
+  position: relative;
+  transition: box-shadow .5s ease 0s, top .5s ease 0s, border .5s ease 0s, color .5s ease 0s;
+  top: 0;
+}
+
+.tab:first-child {
+  margin-left: 0;
+}
+
+.tab:hover {
+  cursor: pointer;
+  box-shadow: 0px 6px 15px rgba(255,255,255,.5);
+  top: -3px;
+  border: 1px rgba(255,255,255,.3) solid;
+  color: rgba(255,255,255,0.8);
+  /* border-bottom: 5px rgba(255,255,255,.3) solid; */ 
+}
+
+.tabs .active {
+  /* border-bottom: 5px rgba(255, 33, 33, 1) solid; */
+  box-shadow: 0px 6px 15px rgba(255, 30, 30, .5);
+  border: 1px rgba(255,30,30,.4) solid;
+  top: -18px;
+  color: rgba(255,50,50,1);
+}
+
+.tabs menu ul {
+  list-style: none;
+}
+
+.tabs menu + div {
+  clear: both;
+  margin-top: 15px;
+  padding: 15px 0;
+  color: white;
+  line-height: 1.5;
+  color: rgba(255,255,255,.6);
+}
+
+.tapContainer {
+  height: 160px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: left;
+}
+
+.styleChip {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.styleContent {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+}
+
+.styleLabel {
+    position: relative;
+    display: inline-block;
+}
+
+.styleLabel .tooltiptext {
+    visibility: hidden;
+    width: 240px;
+    background-color: #fbfafa;
+    color: #010101;
+    text-align: left;
+    border-radius: 6px;
+    border: 1px solid #020202;
+    padding: 5px 4px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -120px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.styleLabel .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #090909 transparent transparent transparent;
+}
+
+.styleLabel:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dimensionLabel {
+  color: black;
+}
+
+.dimensionContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: left;
+}
+
+.dimensionInput {
+  height: 50px;
+  width: 400px;
+  font-size: 18px;
+}
+
+.materialChip {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  margin-right: 20px;
+  margin-top: -20px;
+}
+
+.materialContent {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
+
+.materialIcon {
+  border: 3px solid rgba(80, 80, 80, 1);
+  border-radius: 60px;
+}
+
+.materialLabel {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.materialLabel .tooltiptext {
+  visibility: hidden;
+  width: 240px;
+  background-color: #fbfafa;
+  color: #010101;
+  text-align: left;
+  border-radius: 6px;
+  border: 1px solid #020202;
+  padding: 5px 4px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -120px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.materialLabel .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #090909 transparent transparent transparent;
+}
+
+.materialLabel:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.printSpecChip {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  width: 120px;
+}
+
+.printSpecContent {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
+
+.printSpecIcon {
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 80px;
+  height: 80px;
+}
+
+.printSpecLabel {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.printSpecLabel .tooltiptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #fbfafa;
+  color: #010101;
+  text-align: left;
+  border-radius: 6px;
+  border: 1px solid #020202;
+  padding: 5px 4px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.printSpecLabel .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #090909 transparent transparent transparent;
+}
+
+.printSpecLabel:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+#quantityButton {
+  height: '60px';
+  margin-top: '20px';
+  background-color: '#35b3a8';
+  color: "white";
+  border-radius: '30px';
+  border: 'none';
+}
+
+.addLight {
+  background-color: #dd5c18;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: bolder;
+  pointer-events: all;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  box-shadow: inset 0 0 0 0.09px black;
+
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 30px;
+  position: absolute;
+  top: 200px;
+  right: 40px;
+  background-color: black;
+  box-shadow: inset 0 0 0 0.09px black;
+}
+
+.addLight:hover {
+  box-shadow: inset -250px 0 0 0 black;
+}
